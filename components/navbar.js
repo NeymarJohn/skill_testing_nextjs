@@ -5,11 +5,11 @@ import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
   const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
+    "PRODUCTS",
+    "APPS & GAMES",
+    "FEATURES",
+    "SUPPORT",
+    "ABOUT",
   ];
 
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
                         className="w-8"
                       />
                     </span>
-                    <span>Nextly</span>
+                    <span>board</span>
                   </span>
                 </Link>
 
@@ -93,7 +93,7 @@ const Navbar = () => {
               Get Started
           </Link>
 
-          <ThemeChanger />
+          {/* <ThemeChanger /> */}
         </div>
       </nav>
     </div>
