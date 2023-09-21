@@ -1,17 +1,13 @@
 import Head from "next/head";
-import Hero from "../components/hero";
+import HeroComponent from "../components/hero";
 import Navbar from "../components/navbar";
-import SectionTitle from "../components/sectionTitle";
-
-import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
-import Benefits from "../components/benefits";
+import StarComponent from "../components/star";
 import Footer from "../components/footer";
+import FavoriteComponent from "../components/favorite";
+import DiscoverComponent from "../components/discover";
+import TopGameComponent from "../components/game";
 import Testimonials from "../components/testimonials";
-import Cta from "../components/cta";
-import Faq from "../components/faq";
-import PopupWidget from "../components/popupWidget";
-import { MyInfoContainer } from "./index.styled";
+import { MyInfoContainer, VRContainerBox, BackgroundStarComponent } from "./index.styled";
 
 const Home = () => {
   return (
@@ -39,43 +35,29 @@ const Home = () => {
           }}
         />
         <Navbar />
-        <Hero />
+        <HeroComponent />
       </MyInfoContainer>
-      <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page"
+      <BackgroundStarComponent className="py-5" style={{transform: 'rotate(-2deg)'}}>
+        <StarComponent />
+      </BackgroundStarComponent>
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          background:
+            "linear-gradient(323deg, rgba(107, 64, 242, 0.4) 68%, rgba(143, 62, 242, 0.4) 81%, rgba(186, 60, 243, 0.4) 90%, rgba(250, 52, 244, 0.4) 100%)",
+        }}
       >
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
-      </SectionTitle>
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs"
-      >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Video />
-      <SectionTitle
-        pretitle="Testimonials"
-        title="Here's what our customers said"
-      >
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
-      </SectionTitle>
-      <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
-      </SectionTitle>
-      <Faq />
-      <Cta />
+        <FavoriteComponent />
+        <DiscoverComponent />
+        <StarComponent />
+        <TopGameComponent />
+        {/* <StarComponent /> */}
+      </div>
+      <BackgroundStarComponent className="py-5">
+        <StarComponent />
+      </BackgroundStarComponent>
       <Footer />
-      <PopupWidget />
     </>
   );
 };
