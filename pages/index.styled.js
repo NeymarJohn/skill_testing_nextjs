@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 export const MyInfoContainer = styled.div`
@@ -10,8 +11,8 @@ export const MyInfoContainer = styled.div`
 `;
 
 export const BackgroundStarComponent = styled.div`
-position: absolute;
-margin-top: -40px;
+  position: absolute;
+  margin-top: -40px;
   background: linear-gradient(
     180deg,
     rgba(112, 93, 159, 0.5) 1%,
@@ -21,4 +22,6 @@ margin-top: -40px;
   );
   border: 1px solid #ffffff33;
   box-shadow: 0px 4px 20px -1px #00000000;
-`
+`;
+
+export default BackgroundStarComponent;
